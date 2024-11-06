@@ -12,7 +12,7 @@
 
 - 🌱 Estoy aprendiendo **Spring, angular, C#, STRUTS 2**.
 
-- 👨‍💻 <a href="https://juancarlos92.github.io/Portfolio/">Mi portfolio</a>
+- 👨‍💻 <a href="">Mi portfolio</a>
 
 <hr>
 <Br>
