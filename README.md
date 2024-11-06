@@ -57,7 +57,7 @@
     <kbd>Database</kbd>
     <br>
     <br>
-    <img width="30px" src="https://w7.pngwing.com/pngs/1011/424/png-transparent-oracle-database-oracle-corporation-relational-database-management-system-postgresql-oracle-logo-angle-text-logo-thumbnail.png" />
+    <img width="30px" src="https://media.licdn.com/dms/image/v2/D4E12AQF64SYsV08fkA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1662093619580?e=2147483647&v=beta&t=uoidKIOEIH0ZlboxixU1Lfkg5rPnYoCizMrA7P-YVQ4" />
     <img width="30px" src="https://img.icons8.com/color/48/000000/mysql-logo.png" />
   </kbd>
   <br>
