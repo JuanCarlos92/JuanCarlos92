@@ -8,9 +8,9 @@
 
 - 🏫 Cursando 2º Grado Superior en DAM.
 
-- 🔭 Uso a diario **Java Spring angular SQL Kotlin HTML CSS JS**.
+- 🔭 Uso a diario **Java, SQL, Kotlin, HTML, CSS, JS**.
 
-- 🌱 Estoy aprendiendo **Spring, angular, C#, STRUTS 2**.
+- 🌱 Estoy aprendiendo **Spring, angular, TypeScript, Phyton**.
 
 - 👨‍💻 <a href="https://juancarlos92.github.io/MiPortfolio/">Mi portfolio</a>
 
