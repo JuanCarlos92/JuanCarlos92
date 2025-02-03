@@ -8,7 +8,7 @@
 
 - 🏫 Cursando 2º Grado Superior en DAM.
 
-- 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate**.
+- 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate, lombok**.
 
 - 🌱 Estoy aprendiendo: **Spring,  Angular,  Lambda,  Laravel, Android**.
 
