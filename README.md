@@ -7,6 +7,8 @@
 <h1>About Me! 😎</h1>
 
 - 🏫 Cursando 2º Grado Superior en DAM.
+  
+- 💻 Mi hobby es programar, siempre explorando nuevas tecnologías y creando proyectos.
 
 - 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate, lombok**.
 
