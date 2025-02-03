@@ -10,7 +10,7 @@
 
 - 🔭 Uso a diario **Java, Spring , Angular, TypeScript, JPA, Hibernate**.
 
-- 🌱 Estoy aprendiendo **Spring, Angular, TypeScript, Laravel**.
+- 🌱 Estoy aprendiendo **Spring, Angular, Lambda, Laravel**.
 
 - 👨‍💻 <a href="https://juancarlos92.github.io/MiPortfolio/">Mi portfolio</a>
 
