@@ -10,9 +10,9 @@
   
 - 💻 Mi hobby es programar, siempre explorando nuevas tecnologías y creando proyectos.
 
-- 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate, lombok**.
+- 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate,  lombok,  Flutter, GO**.
 
-- 🌱 Estoy aprendiendo: **Spring,  Angular,  Lambda,  Laravel, Android**.
+- 🌱 Estoy aprendiendo: **Spring,  Angular,  Lambda,  Laravel,  Android, Flutter, GO**.
 
 - 👨‍💻 <a href="https://juancarlos92.github.io/MiPortfolio/">Mi portfolio</a>
 
