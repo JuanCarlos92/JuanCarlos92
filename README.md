@@ -90,7 +90,9 @@
     <br>
     <img width="30px" src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
     <img width="30px" src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/netlify/netlify-original.svg" />
-      <img width="30px" src="https://static-00.iconduck.com/assets.00/aws-cognito-icon-1756x2048-ayslpt3d.png" />
+    <img width="30px" src="https://static-00.iconduck.com/assets.00/aws-cognito-icon-1756x2048-ayslpt3d.png" />
+    <img width="30px" src="https://media.printables.com/media/prints/128175/images/1229540_1fa51ee6-6136-48b0-9c8b-44990845c1b4/thumbs/inside/1280x960/png/ec2-1.webp" />
+    
     
     
   </kbd>
