@@ -6,13 +6,13 @@
 <Br>
 <h1>About Me! 😎</h1>
 
-- 🏫 Cursando 2º Grado Superior en DAM.
+- 🏫 Programando y aprendiendo tecnologías a diario.
   
 - 💻 Mi hobby es programar, siempre explorando nuevas tecnologías y creando proyectos.
 
 - 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate,  lombok,  Flutter, GO**.
 
-- 🌱 Estoy aprendiendo: **Spring,  Angular,  Lambda,  Laravel,  Android, Flutter, GO**.
+- 🌱 Estoy aprendiendo: **Spring,  Angular, React, Lambda,  Laravel, Flutter, GO**.
 
 - 👨‍💻 <a href="https://juancarlos92.github.io/MiPortfolio/">Mi portfolio</a>
 
