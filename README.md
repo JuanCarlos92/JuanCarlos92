@@ -14,7 +14,7 @@
 
 - 🌱 Estoy aprendiendo: **Spring,  Angular, React, Lambda,  Laravel, Flutter, GO**.
 
-- 👨‍💻 <a href="https://juancarlos92.github.io/MiPortfolio/">Mi portfolio</a>
+- 👨‍💻 <a href="https://juancarlos92.github.io/Portfolio/">Portfolio</a>
 
 <hr>
 <Br>
