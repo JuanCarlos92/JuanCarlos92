@@ -1,6 +1,12 @@
 ---
 keywords: [docker, comandos docker, cheatsheet docker, docker tutorial, docker desde cero, docker para principiantes, docker avanzado, docker en producción, gestión de contenedores, gestión de imágenes, volúmenes docker, redes docker]
 ---
+Instalación de Docker Engine (Linux)
+Utilizar el script de instalación oficial de Docker, que se encarga de instalar todas las dependencias necesarias y configurar el sistema para que Docker funcione correctamente.
+    
+```bash title="Instalación de Docker Engine en Linux"
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+```
 
 Introducir usuario en el grupo docker
 ``` shell
