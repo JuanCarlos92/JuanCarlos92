@@ -39,7 +39,7 @@ Obtiene los logs del contenedor
 docker logs [id_contenedor]
 ```
 
-Obtiene los logs del contenedor en tiempo real
+Obtiene los logs del contenedor -f -->  en tiempo real
 ``` shell
 docker logs -f [id_contenedor]
 ```
