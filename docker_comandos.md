@@ -29,7 +29,7 @@ Podemos listar los contenedores disponibles a través del siguiente comando
 docker ps -a
 ```
 
-Ejecutar un contenedor  -d --> en segundo plano
+Ejecutar un contenedor  -d  --> en segundo plano
 ``` shell
 docker run -d [nombre_imagen]
 ```
@@ -54,17 +54,17 @@ se reinicie siempre que falle o se reinicie el servidor anfitrión (Siempre ON)
 docker run --restart always [nombre_imagen]
 ```
 
-Ejecutar un contenedor. -P  ->  Nos permite mapear un puerto del host a un puerto del contenedor
+Ejecutar un contenedor. -P  -->  Nos permite mapear un puerto del host a un puerto del contenedor
 ``` shell
 docker run -d -p 8080:80 [nombre_imagen]
 ```
 
-Ejecutar un contenedor. -P  ->  Nos permite mapear varios puerto del host a un puerto del contenedor
+Ejecutar un contenedor. -P  -->  Nos permite mapear varios puerto del host a un puerto del contenedor
 ``` shell
 docker run -d -p 8080:80 -p 8081:81 [nombre_imagen]
 ```
 
-Ejecutar un contenedor. -P  ->  Nos permite mapear un rango de puerto del host a un puerto del contenedor
+Ejecutar un contenedor. -P  -->  Nos permite mapear un rango de puerto del host a un puerto del contenedor
 ``` shell
 docker run -d -p 8080-8085:80 [nombre_imagen]
 ```
