@@ -46,7 +46,7 @@ docker logs -f [id_contenedor]
 
 acoplarnos al contenedor y ver la salida en tiempo real
 ``` shell
-docker attach <id_contenedor>
+docker attach [id_contenedor]
 ```
 
 se reinicie siempre que falle o se reinicie el servidor anfitrión (Siempre ON)
