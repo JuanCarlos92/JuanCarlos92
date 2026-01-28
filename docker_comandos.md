@@ -9,6 +9,69 @@ Se encarga de instalar todas las dependencias necesarias y configurar el sistema
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
 ```
 
+Ver comandos docker
+``` shell
+docker
+```
+
+Ejecutar un contenedor en tiempo real
+``` shell
+docker run [nombre_imagen]
+```
+
+Ver imágenes ejecutándose
+``` shell
+docker ps
+```
+
+Podemos listar los contenedores disponibles a través del siguiente comando
+``` shell
+docker ps -a
+```
+
+Ejecutar un contenedor  -d --> en segundo plano
+``` shell
+docker run -d [nombre_imagen]
+```
+
+Obtiene los logs del contenedor
+``` shell
+docker logs [id_contenedor]
+```
+
+Obtiene los logs del contenedor en tiempo real
+``` shell
+docker logs -f [id_contenedor]
+```
+
+acoplarnos al contenedor y ver la salida en tiempo real
+``` shell
+docker attach <id_contenedor>
+```
+
+se reinicie siempre que falle o se reinicie el servidor anfitrión (Siempre ON)
+``` shell
+docker run --restart always [nombre_imagen]
+```
+
+Ejecutar un contenedor. -P  ->  Nos permite mapear un puerto del host a un puerto del contenedor
+``` shell
+docker run -d -p 8080:80 [nombre_imagen]
+```
+
+Ejecutar un contenedor. -P  ->  Nos permite mapear varios puerto del host a un puerto del contenedor
+``` shell
+docker run -d -p 8080:80 -p 8081:81 [nombre_imagen]
+```
+
+Ejecutar un contenedor. -P  ->  Nos permite mapear un rango de puerto del host a un puerto del contenedor
+``` shell
+docker run -d -p 8080-8085:80 [nombre_imagen]
+```
+
+
+
+
 Introducir usuario en el grupo docker
 ``` shell
 sudo usermod -a -G docker [nombre_usuario]
@@ -38,7 +101,7 @@ Ver imágenes ejecutándose
 ``` shell
 docker ps
 ```
- 
+
 Iniciar una imagen
 ``` shell
 docker run [nombre_imagen]
@@ -65,12 +128,6 @@ docker run -i -t oldlts:latest /bin/bash
 Para iniciar un contenedor en modo demonio
 ``` shell
 docker run -d [identificador_imagen]
-```
- 
- 
-Como ya hemos comentado, cada vez que ejecutamos el comando run estamos creando un contenedor nuevo, por lo que lo recomendable es ejecutarlo tan solo una vez. Luego podemos listar los contenedores disponibles a través del siguiente comando.
-``` shell
-docker ps -a
 ```
  
 Hay dos maneras de poner en marcha el contenedor a través del mismo comando, pudiéndose utilizar su identificador (CONTAINER ID) o su nombre (NAMES).
