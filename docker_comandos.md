@@ -1,7 +1,3 @@
----
-keywords: [docker, comandos docker, cheatsheet docker, docker tutorial, docker desde cero, docker para principiantes, docker avanzado, docker en producción, gestión de contenedores, gestión de imágenes, volúmenes docker, redes docker]
----
-
 ## 1. Instalación y Configuración del Entorno
 Comandos iniciales para preparar Docker y gestionar permisos de usuario en sistemas Linux.
 
