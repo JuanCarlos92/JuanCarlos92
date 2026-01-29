@@ -90,12 +90,12 @@ Ejecutar un contenedor. -P  -->  Nos permite mapear un puerto del host a un puer
 docker run -d -p 8080:80 [nombre_imagen]
 ```
 
-Ejecutar un contenedor. -P  -->  Nos permite mapear varios puerto del host a un puerto del contenedor
+Ejecutar un contenedor. -P  -->  Nos permite mapear varios puerto del host
 ``` shell
 docker run -d -p 8080:80 -p 8081:81 [nombre_imagen]
 ```
 
-Ejecutar un contenedor. -P  -->  Nos permite mapear un rango de puerto del host a un puerto del contenedor
+Ejecutar un contenedor. -P  -->  Nos permite mapear un rango de puertoS
 ``` shell
 docker run -d -p 8080-8085:80 [nombre_imagen]
 ```
