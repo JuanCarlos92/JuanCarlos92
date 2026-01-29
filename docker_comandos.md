@@ -44,17 +44,17 @@ Podemos listar los contenedores disponibles a través del siguiente comando
 docker ps -a
 ```
 
-Obtiene los logs del contenedor
+Logs del contenedor
 ``` shell
 docker logs [id_contenedor]
 ```
 
-Obtiene los logs del contenedor -f -->  en tiempo real
+Logs del contenedor -f -->  en tiempo real
 ``` shell
 docker logs -f [id_contenedor]
 ```
 
-acoplarnos al contenedor y ver la salida en tiempo real
+Acoplarnos al contenedor y ver la salida en tiempo real
 ``` shell
 docker attach ef7e107e0aae
 ```
@@ -72,7 +72,7 @@ Ejecutar un contenedor  -d  --> en segundo plano
 docker run -d [identificador_imagen]
 ```
  
-Para acceder al contenedor, además de crearlo, se puede hacer de dos maneras. Una es haciendo referencia al IMAGE ID y otra al repositorio (REPOSITORY) y la etiqueta (TAG).
+Para acceder al contenedor, además de crearlo
 ``` shell
 docker run -i -t b72889fa879c /bin/bash
 ```
@@ -80,7 +80,7 @@ docker run -i -t b72889fa879c /bin/bash
 docker run -i -t ubuntu:14.04 /bin/bash
 ```
 
-se reinicie siempre que falle o se reinicie el servidor anfitrión (Siempre ON)
+Se reinicie siempre que falle o se reinicie el servidor anfitrión (Siempre ON)
 ``` shell
 docker run --restart always [nombre_imagen]
 ```
