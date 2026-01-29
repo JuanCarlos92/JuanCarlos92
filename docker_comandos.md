@@ -290,10 +290,7 @@ docker build -t usuario-dockerhub/mi-microservicio:1.0 .
 
 ### Ejecución del Microservicio
 ```bash
-docker run -d \
-  --name mi-microservicio \
-  -p 8080:8080 \
-  usuario-dockerhub/mi-microservicio:1.0
+docker run -d --name mi-microservicio -p 8080:8080 usuario-dockerhub/mi-microservicio:1.0
 ```
 
 ### ¿Estas imágenes se suben a Docker Hub?
