@@ -366,129 +366,82 @@ Esto es Docker en **entornos reales y profesionales**.
 
 ---
 
-## 11. Volúmenes (Persistencia de Datos)
+## 11. Redes Docker (Docker Networks)
 
-Los **volúmenes** permiten persistir datos fuera del ciclo de vida del contenedor.
+Las **redes Docker** permiten la comunicación controlada entre contenedores.
 
-### Crear y listar volúmenes
-
-```bash
-docker volume create mi-volumen
-docker volume ls
-```
-
-### Usar volumen en un contenedor
+### Crear una red
 
 ```bash
-# Volumen gestionado por Docker
-docker run -d -v mi-volumen:/data nginx
-
-# Bind mount (ruta del host)
-docker run -d -v /ruta/host:/data nginx
-```
-
-### Inspeccionar y eliminar volúmenes
-
-```bash
-docker volume inspect mi-volumen
-docker volume rm mi-volumen
-docker volume prune
-```
-
----
-
-## 12. Redes Docker
-
-Docker crea redes virtuales para comunicar contenedores.
-
-### Listar y crear redes
-
-```bash
-docker network ls
 docker network create mi-red
 ```
 
-### Ejecutar contenedores en la misma red
+Especificando el driver (por defecto es `bridge`):
 
 ```bash
-docker run -d --name app --network mi-red mi-app
-docker run -d --name db --network mi-red mysql
+docker network create --driver bridge mi-red
 ```
 
-Los contenedores pueden comunicarse usando el **nombre del contenedor** como hostname.
+### Tipos de redes más comunes
+
+* **bridge**: Red por defecto. Comunicación entre contenedores en el mismo host.
+* **host**: El contenedor comparte la red del host (⚠️ cuidado con la seguridad).
+* **overlay**: Comunicación entre contenedores en distintos hosts (Docker Swarm).
+* **macvlan**: El contenedor se comporta como un dispositivo físico en la red.
+* **none**: Sin acceso a red.
+
+En la mayoría de proyectos se utiliza **bridge**.
 
 ---
 
-## 13. Attach vs Exec
-
-### Attach
-
-Conecta al proceso principal del contenedor.
+### Listar redes
 
 ```bash
-docker attach id_contenedor
+docker network ls
 ```
 
-Salir sin detenerlo:
-
-> **Ctrl + P + Ctrl + Q**
-
-### Exec (recomendado)
-
-Ejecuta comandos adicionales dentro del contenedor.
+### Inspeccionar una red
 
 ```bash
-docker exec -it id_contenedor /bin/bash
+docker network inspect mi-red
 ```
+
+Permite ver:
+
+* contenedores conectados
+* IPs asignadas
+* driver usado
 
 ---
 
-## 14. Comandos Útiles de Administración
+### Conectar un contenedor a una red
 
-### Parar y eliminar todo
+Al crear el contenedor:
 
 ```bash
-# Parar todos los contenedores
-docker stop $(docker ps -a -q)
-
-# Eliminar todos los contenedores
-docker rm $(docker ps -a -q)
-
-# Eliminar todas las imágenes
-docker rmi $(docker images -q)
+docker run -d --name mi-contenedor --network mi-red nginx
 ```
 
-### Commit avanzado
+O conectar un contenedor existente:
 
 ```bash
-docker commit -a "Autor" -m "v1.0" id_contenedor repo:tag
-```
-
-### Obtener ruta de logs del contenedor
-
-```bash
-docker inspect --format='{{.LogPath}}' id_contenedor
+docker network connect mi-red mi-contenedor
 ```
 
 ---
 
-## 15. Buenas Prácticas en Producción
+### Desconectar un contenedor de una red
 
-* Usar **Dockerfile** en lugar de `docker commit`
-* Imágenes pequeñas (alpine, distroless)
-* Multi-stage builds
-* Variables de entorno para configuración
-* Un proceso por contenedor
-* Versionar imágenes (evitar `latest` en prod)
-* Usar volúmenes para datos persistentes
+```bash
+docker network disconnect mi-red mi-contenedor
+```
 
 ---
 
-## 16. Limpieza General del Sistema
+### Eliminar una red
 
 ```bash
-# Limpieza completa (cuidado)
-docker system prune -a
+docker network rm mi-red
 ```
 
-Ideal para entornos de desarrollo.
+> Una red no puede eliminarse si tiene contenedores conectados.
