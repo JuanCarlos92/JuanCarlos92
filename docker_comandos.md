@@ -136,6 +136,11 @@ docker stop ef7e107e0aae
 docker stop lonely_wing
 ```
 
+Borrar todos los contenedores parados
+```shell
+docker container prune
+```
+
 Parar todos los contenedores
 ``` shell
 docker stop $(docker ps -a -q)
