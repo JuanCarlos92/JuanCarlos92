@@ -1,3 +1,11 @@
+# Cheat Sheet de Comandos Docker
+
+---
+
+## **Keywords:** docker, comandos docker, cheatsheet docker, docker tutorial, docker desde cero, gestión de contenedores, gestión de imágenes, volúmenes docker, redes docker
+
+---
+
 ## 1. Instalación y Configuración del Entorno
 
 Comandos iniciales para preparar Docker y gestionar permisos de usuario en sistemas Linux.
@@ -355,3 +363,132 @@ docker run -e SPRING_PROFILES_ACTIVE=prod -p 8080:8080 mi-microservicio
 * Misma imagen para dev, test y prod
 
 Esto es Docker en **entornos reales y profesionales**.
+
+---
+
+## 11. Volúmenes (Persistencia de Datos)
+
+Los **volúmenes** permiten persistir datos fuera del ciclo de vida del contenedor.
+
+### Crear y listar volúmenes
+
+```bash
+docker volume create mi-volumen
+docker volume ls
+```
+
+### Usar volumen en un contenedor
+
+```bash
+# Volumen gestionado por Docker
+docker run -d -v mi-volumen:/data nginx
+
+# Bind mount (ruta del host)
+docker run -d -v /ruta/host:/data nginx
+```
+
+### Inspeccionar y eliminar volúmenes
+
+```bash
+docker volume inspect mi-volumen
+docker volume rm mi-volumen
+docker volume prune
+```
+
+---
+
+## 12. Redes Docker
+
+Docker crea redes virtuales para comunicar contenedores.
+
+### Listar y crear redes
+
+```bash
+docker network ls
+docker network create mi-red
+```
+
+### Ejecutar contenedores en la misma red
+
+```bash
+docker run -d --name app --network mi-red mi-app
+docker run -d --name db --network mi-red mysql
+```
+
+Los contenedores pueden comunicarse usando el **nombre del contenedor** como hostname.
+
+---
+
+## 13. Attach vs Exec
+
+### Attach
+
+Conecta al proceso principal del contenedor.
+
+```bash
+docker attach id_contenedor
+```
+
+Salir sin detenerlo:
+
+> **Ctrl + P + Ctrl + Q**
+
+### Exec (recomendado)
+
+Ejecuta comandos adicionales dentro del contenedor.
+
+```bash
+docker exec -it id_contenedor /bin/bash
+```
+
+---
+
+## 14. Comandos Útiles de Administración
+
+### Parar y eliminar todo
+
+```bash
+# Parar todos los contenedores
+docker stop $(docker ps -a -q)
+
+# Eliminar todos los contenedores
+docker rm $(docker ps -a -q)
+
+# Eliminar todas las imágenes
+docker rmi $(docker images -q)
+```
+
+### Commit avanzado
+
+```bash
+docker commit -a "Autor" -m "v1.0" id_contenedor repo:tag
+```
+
+### Obtener ruta de logs del contenedor
+
+```bash
+docker inspect --format='{{.LogPath}}' id_contenedor
+```
+
+---
+
+## 15. Buenas Prácticas en Producción
+
+* Usar **Dockerfile** en lugar de `docker commit`
+* Imágenes pequeñas (alpine, distroless)
+* Multi-stage builds
+* Variables de entorno para configuración
+* Un proceso por contenedor
+* Versionar imágenes (evitar `latest` en prod)
+* Usar volúmenes para datos persistentes
+
+---
+
+## 16. Limpieza General del Sistema
+
+```bash
+# Limpieza completa (cuidado)
+docker system prune -a
+```
+
+Ideal para entornos de desarrollo.
