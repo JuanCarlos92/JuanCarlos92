@@ -1,248 +1,158 @@
 ---
 keywords: [docker, comandos docker, cheatsheet docker, docker tutorial, docker desde cero, docker para principiantes, docker avanzado, docker en producción, gestión de contenedores, gestión de imágenes, volúmenes docker, redes docker]
 ---
-Instalación de Docker Engine (Linux)
 
-Se encarga de instalar todas las dependencias necesarias y configurar el sistema para que Docker funcione correctamente.
-    
-```bash title="Instalación de Docker Engine en Linux"
+## 1. Instalación y Configuración del Entorno
+Comandos iniciales para preparar Docker y gestionar permisos de usuario en sistemas Linux.
+
+### Instalación de Docker Engine
+```bash
+# Instalación automática mediante script oficial
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
-```
 
-Ver comandos docker
-``` shell
+# Ver ayuda y lista de comandos de Docker
 docker
 ```
 
-Buscar un contenedor para descargar
-``` shell
-docker search [nombre_contenedor]
+### Gestión de Usuarios y Permisos
+```bash
+# Introducir usuario actual en el grupo docker para evitar usar sudo
+sudo usermod -a -G docker nombre_usuario
+
+# Refrescar los grupos en la sesión actual sin reiniciar
+newgrp docker
 ```
 
-Instalar una imagen
-``` shell
-docker pull [nombre_imagen]
+## 2. Gestión de Imágenes
+Operaciones relacionadas con la búsqueda, descarga y creación de imágenes.
+
+### Búsqueda y Descarga
+```bash
+# Buscar una imagen en Docker Hub
+docker search nombre_contenedor
+
+# Descargar una imagen desde el registro
+docker pull nombre_imagen
 ```
 
-Realizar commit de una imagen
-``` shell
-docker commit -a "[información creador]" -m "[versión del programa]" [identificador_container] [nombre_repositorio:nombre_TAG]
-```
-
-Listar imágenes instaladas
-``` shell
+### Listado y Organización
+```bash
+# Listar todas las imágenes instaladas localmente
 docker images
+
+# Crear una etiqueta (tag) personalizada para una imagen existente
+docker tag b72889fa879c oldlts:latest
 ```
 
-Ver imágenes ejecutándose
-``` shell
+### Creación de Imágenes
+```bash
+# Crear una nueva imagen a partir de los cambios de un contenedor (Commit)
+docker commit -a "información creador" -m "versión" id_container nombre_repositorio:tag
+```
+
+## 3. Ejecución de Contenedores (docker run)
+Comandos para crear y poner en marcha contenedores con diferentes configuraciones.
+
+### Ejecución Básica e Interactiva
+```bash
+# Iniciar un contenedor básico
+docker run nombre_imagen
+
+# Ejecutar y acceder a la terminal interactiva del contenedor
+docker run -it id_imagen_o_nombre /bin/bash
+
+# Ejecutar usando una etiqueta personalizada
+docker run -it oldlts:latest /bin/bash
+```
+
+### Ejecución con Parámetros Avanzados
+```bash
+# Ejecutar en segundo plano (Modo Detached)
+docker run -d identificador_imagen
+
+# Configurar reinicio automático (Siempre activo)
+docker run --restart always nombre_imagen
+
+# Ejecutar con nombre personalizado y mapeo de puertos
+docker run -d --name web1 -p 8081:80 nginx
+```
+
+### Mapeo de Puertos
+```bash
+# Un solo puerto (Host:Contenedor)
+docker run -d -p 8080:80 nombre_imagen
+
+# Múltiples puertos
+docker run -d -p 8080:80 -p 8081:81 nombre_imagen
+
+# Rango de puertos
+docker run -d -p 8080-8085:80 nombre_imagen
+```
+
+## 4. Administración de Contenedores Activos
+Comandos para inspeccionar y manipular contenedores que ya están corriendo.
+
+### Visualización y Estado
+```bash
+# Ver solo los contenedores en ejecución
 docker ps
-```
 
-Podemos listar los contenedores disponibles a través del siguiente comando
-``` shell
+# Ver todos los contenedores (incluyendo los detenidos)
 docker ps -a
 ```
 
-Logs del contenedor
-``` shell
-docker logs [id_contenedor]
+### Inspección y Logs
+```bash
+# Ver los logs de un contenedor
+docker logs id_contenedor
+
+# Seguir los logs en tiempo real
+docker logs -f id_contenedor
+
+# Obtener la ruta del archivo de registro (JSON log)
+docker inspect --format='{{.LogPath}}' id_contenedor
 ```
 
-Logs del contenedor -f -->  en tiempo real
-``` shell
-docker logs -f [id_contenedor]
+### Interacción con el Contenedor
+```bash
+# Acoplarse a la salida de un contenedor en ejecución
+docker attach id_o_nombre
+
+# Ejecutar un comando (ej: ls) sin entrar al contenedor
+docker exec id_contenedor ls
+
+# Abrir una terminal en un contenedor que ya está en marcha
+docker exec -it id_contenedor bash
 ```
 
-Acoplarnos al contenedor y ver la salida en tiempo real
-``` shell
-docker attach ef7e107e0aae
-```
-``` shell
-docker attach lonely_wing
-```
+> Nota: Para salir de un terminal de Docker sin apagar el contenedor, usa la combinación **Ctrl + P** seguido de **Ctrl + Q**.
 
-Iniciar una imagen
-``` shell
-docker run [nombre_imagen]
-```
+## 5. Control de Ciclo de Vida y Limpieza
+Comandos para detener, iniciar y eliminar recursos del sistema.
 
-Ejecutar un contenedor  -d  --> en segundo plano
-``` shell
-docker run -d [identificador_imagen]
-```
- 
-Para acceder al contenedor, además de crearlo
-``` shell
-docker run -i -t b72889fa879c /bin/bash
-```
-``` shell
-docker run -i -t ubuntu:14.04 /bin/bash
-```
+### Detención e Inicio
+```bash
+# Poner en marcha un contenedor detenido
+docker start id_o_nombre
 
-Se reinicie siempre que falle o se reinicie el servidor anfitrión (Siempre ON)
-``` shell
-docker run --restart always [nombre_imagen]
-```
+# Detener un contenedor en ejecución
+docker stop id_o_nombre
 
-Ejecutar un contenedor. -P  -->  Nos permite mapear un puerto del host a un puerto del contenedor
-``` shell
-docker run -d -p 8080:80 [nombre_imagen]
-```
-
-Ejecutar un contenedor. -P  -->  Nos permite mapear varios puerto del host
-``` shell
-docker run -d -p 8080:80 -p 8081:81 [nombre_imagen]
-```
-
-Ejecutar un contenedor. -P  -->  Nos permite mapear un rango de puertoS
-``` shell
-docker run -d -p 8080-8085:80 [nombre_imagen]
-```
-Ejecutar un contenedor con un nombre y un puerto
-``` shell
-docker run -d --name web1 8081:80 nginx
-```
-``` shell
-docker run -d --name web2 8082:80 nginx
-```
-``` shell
-docker run -d --name web3 8083:80 nginx
-```
-
-Ver lo que contiene el contenedor
-``` shell
-doker exec [id_contenedor] ls
-```
-
-Terminal de un contenedor arrancado
-``` shell
-doker exec -it [id_contenedor] bash
-```
-
-Poner en marcha el contenedor
-``` shell
-docker start ef7e107e0aae
-```
-``` shell
-docker start lonely_wing
-```
-
-Para detener un contenedor
-``` shell
-docker stop ef7e107e0aae
-```
-``` shell
-docker stop lonely_wing
-```
-
-Borrar todos los contenedores parados
-```shell
-docker container prune
-```
-
-Parar todos los contenedores
-``` shell
+# Parar TODOS los contenedores activos
 docker stop $(docker ps -a -q)
 ```
 
-Para borrar un contenedor
-``` shell
-docker rm ef7e107e0aae
-```
-``` shell
-docker rm lonely_wing
-```
+### Eliminación de Recursos
+```bash
+# Borrar un contenedor específico (debe estar detenido)
+docker rm id_o_nombre
 
-Eliminar todos los contenedores
-``` shell
+# Borrar TODOS los contenedores del sistema
 docker rm $(docker ps -a -q)
-```
- 
-Eliminar todas las imágenes
-``` shell
+
+# Borrar todas las imágenes instaladas
 docker rmi $(docker images -q)
-```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Introducir usuario en el grupo docker
-``` shell
-sudo usermod -a -G docker [nombre_usuario]
-```
- 
-Refrescar grupo sin tener que reiniciar
-``` shell
-newgrp docker
-```
- 
-Buscar un contenedor para descargar
-``` shell
-docker search [nombre_contenedor]
-```
-
- 
-
-
-
-
-
-
- 
-El usuario también puede ponerle una etiqueta personalizada que haga referencia a una imagen instalada en su sistema.
-``` shell
-docker tag b72889fa879c oldlts:latest
-```
- 
-Para crear el contenedor y ponerlo en marcha hay que seguir el mismo paso de antes, pero cambiando la referencia por la etiqueta creada por el usuario.
-``` shell
-docker run -i -t oldlts:latest /bin/bash
-```
- 
-
- 
-
- 
-
-
-
-Salir del terminal de docker sin apagarlo
-Control + P  & Control + Q 
-
-
-
-
-Terminal de un contenedor arrancado
-``` shell
-docker exec -ti f38197856de0 /bin/bash
-```
- 
-
- 
-
- 
-Obtener la ruta del registro de un contenedor
-``` shell
-docker inspect --format='{{.LogPath}}' $ID_CONTENEDOR
+# Eliminar todos los contenedores parados de una sola vez
+docker container prune
 ```
