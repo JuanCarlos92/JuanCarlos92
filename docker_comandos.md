@@ -1,5 +1,3 @@
-
-
 ## 1. Instalación y Configuración del Entorno
 
 Comandos iniciales para preparar Docker y gestionar permisos de usuario en sistemas Linux.
