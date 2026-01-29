@@ -294,7 +294,7 @@ docker run -d --name mi-microservicio -p 8080:8080 usuario-dockerhub/mi-microser
 ```
 
 ### ¿Estas imágenes se suben a Docker Hub?
-Sí ✅ exactamente igual que **nginx**, **mysql** o cualquier otra imagen oficial.
+Sí exactamente igual que **nginx**, **mysql** o cualquier otra imagen oficial.
 
 Flujo típico:
 1. Construyes la imagen con `docker build`
