@@ -227,6 +227,43 @@ docker build -t mi-nginx .
 docker run -d -p 8080:80 mi-nginx
 ```
 
+### Ejemplo Python (simple)
+
+```dockerfile
+FROM python:alpine
+
+WORKDIR /app
+
+COPY script.py .
+
+CMD ["python", "script.py"]
+```
+
+```bash
+docker build -t mi-python .
+docker run --rm mi-python
+```
+
+### Ejemplo Python con dependencias
+
+```dockerfile
+FROM python:alpine
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY script.py .
+
+CMD ["python", "script.py"]
+```
+
+```bash
+docker build -t mi-python-deps .
+docker run --rm mi-python-deps
+```
+
 ---
 
 ## 8. Dockerfile para Microservicio Spring Boot
