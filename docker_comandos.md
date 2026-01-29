@@ -86,7 +86,7 @@ Ejemplo:
 docker commit 1234567890ab mi-imagen
 ```
 
-⚠️ Uso puntual. En entornos profesionales se prefiere **Dockerfile**.
+Uso puntual. En entornos profesionales se prefiere **Dockerfile**.
 
 ---
 
