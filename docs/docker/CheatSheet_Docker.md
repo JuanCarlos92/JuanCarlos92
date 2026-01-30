@@ -73,13 +73,13 @@ Esto es clave para:
 ### Crear imagen desde un contenedor (docker commit)
 
 ```bash
-docker commit <container_id> <nombre_imagen>
+# Realizar commit con metadatos de autor y versión (Recomendado)
+docker commit -a "[información creador]" -m "[versión del programa]" [id_contenedor] [nombre_repositorio:tag]
 ```
 
-Ejemplo:
-
 ```bash
-docker commit 1234567890ab mi-imagen
+# Ejemplo simple:
+docker commit 1234567890ab mi-imagen:v1.0
 ```
 
 Uso puntual. En entornos profesionales se prefiere **Dockerfile**.
@@ -149,9 +149,11 @@ docker ps -a
 docker logs id_contenedor
 docker logs -f id_contenedor
 docker inspect id_contenedor
+# Obtener ruta física del log en el host:
+docker inspect --format='{{.LogPath}}' id_contenedor
 ```
 
-### Interacción
+### Interacción y acceso
 
 ```bash
 # Ejecutar comando dentro del contenedor
@@ -159,6 +161,10 @@ docker exec id_contenedor ls
 
 # Terminal interactiva
 docker exec -it id_contenedor bash
+# Unirse a la sesión actual (Original de tus notas)
+docker attach id_contenedor
+docker attach nombre_contenedor
+
 ```
 
 Salir sin detener el contenedor:
