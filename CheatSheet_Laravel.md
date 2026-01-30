@@ -51,16 +51,13 @@ php artisan make:model Post -a
 
 ```
 
-* 
-**-c**: crear controlador 
+* **-c**: crear controlador 
 
 
-* 
-**-s**: crear seeder 
+* **-s**: crear seeder 
 
 
-* 
-**-f**: crear factory 
+* **-f**: crear factory 
 
 
 ## 7. Definición de Esquema (Migración)
@@ -136,9 +133,5 @@ php artisan migrate
 # [cite_start]4. Instalar y compilar dependencias frontend [cite: 128, 137]
 npm install
 npm run dev
-
-```
-
-
 
 ```
