@@ -1,4 +1,4 @@
-# Cheat Sheet de Comandos Docker
+# Cheat Sheet de Comandos Laravel
 
 ## 1. Instalar PHP, Composer y el instalador de Laravel
 
