@@ -1,10 +1,10 @@
 # Cheat Sheet de Comandos Docker
 
----
+============================================================
 
 ## **Keywords:** docker, comandos docker, cheatsheet docker, docker tutorial, docker desde cero, gestión de contenedores, gestión de imágenes, volúmenes docker, redes docker
 
----
+============================================================
 
 ## 1. Instalación y Configuración del Entorno
 
@@ -30,7 +30,7 @@ sudo usermod -a -G docker nombre_usuario
 newgrp docker
 ```
 
----
+============================================================
 
 ## 2. Gestión de Imágenes
 
@@ -55,8 +55,6 @@ docker images
 
 ### Tags: nombre y versión de imágenes
 
-Las imágenes se identifican por `nombre:tag`. El tag suele representar la versión.
-
 ```bash
 # Cambiar nombre o etiqueta de una imagen
 docker tag mi-imagen:latest mi-imagen-v1:latest
@@ -68,13 +66,11 @@ Esto es clave para:
 * subida a repositorios
 * despliegues controlados
 
----
+============================================================
 
 ## 3. Creación de Imágenes
 
 ### Crear imagen desde un contenedor (docker commit)
-
-Permite crear una imagen a partir del estado actual de un contenedor (similar a un snapshot).
 
 ```bash
 docker commit <container_id> <nombre_imagen>
@@ -92,8 +88,6 @@ Uso puntual. En entornos profesionales se prefiere **Dockerfile**.
 
 ### Exportar e importar imágenes (save / load)
 
-Útil para mover imágenes entre sistemas sin usar repositorios remotos.
-
 ```bash
 # Exportar imagen a fichero tar
 docker save -o mi-imagen.tar mi-imagen
@@ -102,7 +96,7 @@ docker save -o mi-imagen.tar mi-imagen
 docker load -i mi-imagen.tar
 ```
 
----
+============================================================
 
 ## 4. Ejecución de Contenedores (docker run)
 
@@ -135,7 +129,7 @@ docker run -d -p 8080:80 nombre_imagen
 docker run -d -p 8080:80 -p 8081:81 nombre_imagen
 ```
 
----
+============================================================
 
 ## 5. Administración de Contenedores
 
@@ -171,7 +165,7 @@ Salir sin detener el contenedor:
 
 > **Ctrl + P + Ctrl + Q**
 
----
+============================================================
 
 ## 6. Ciclo de Vida y Limpieza
 
@@ -198,11 +192,9 @@ docker rmi $(docker images -q)
 docker container prune
 ```
 
----
+============================================================
 
 ## 7. Dockerfile y Build de Imágenes
-
-Un **Dockerfile** define cómo se construye una imagen, capa a capa.
 
 ### Instrucciones principales
 
@@ -264,7 +256,7 @@ docker build -t mi-python-deps .
 docker run --rm mi-python-deps
 ```
 
----
+============================================================
 
 ## 8. Dockerfile para Microservicio Spring Boot
 
@@ -291,7 +283,7 @@ docker build -t usuario/mi-microservicio:1.0 .
 docker run -d --name mi-microservicio -p 8080:8080 usuario/mi-microservicio:1.0
 ```
 
----
+============================================================
 
 ## 9. Repositorios y Docker Hub
 
@@ -321,7 +313,7 @@ docker tag mi-imagen:latest github.com/usuario/mi-imagen:latest
 docker push github.com/usuario/mi-imagen:latest
 ```
 
----
+============================================================
 
 ## 10. ENTRYPOINT, CMD, ARG y Variables de Entorno
 
@@ -362,9 +354,7 @@ docker run -e SPRING_PROFILES_ACTIVE=prod -p 8080:8080 mi-microservicio
 * Configuración por variables
 * Misma imagen para dev, test y prod
 
-Esto es Docker en **entornos reales y profesionales**.
-
----
+============================================================
 
 ## 11. Redes Docker (Docker Networks)
 
@@ -373,12 +363,10 @@ Las **redes Docker** permiten la comunicación controlada entre contenedores.
 ### Crear una red
 
 ```bash
+# Crear una red por defecto (bridge)
 docker network create mi-red
-```
 
-Especificando el driver (por defecto es `bridge`):
-
-```bash
+# Crear una red especificando el driver
 docker network create --driver bridge mi-red
 ```
 
@@ -386,11 +374,11 @@ docker network create --driver bridge mi-red
 
 * **bridge**: Red por defecto. Comunicación entre contenedores en el mismo host.
 * **host**: El contenedor comparte la red del host (⚠️ cuidado con la seguridad).
-* **overlay**: Comunicación entre contenedores en distintos hosts (Docker Swarm).
+* **overlay**: Comunicación entre contenedores en distintos hosts.
 * **macvlan**: El contenedor se comporta como un dispositivo físico en la red.
 * **none**: Sin acceso a red.
 
-En la mayoría de proyectos se utiliza **bridge**.
+> Lo más común es usar **bridge**, aunque para cargas distribuidas se puede usar **overlay**.
 
 ---
 
@@ -399,6 +387,8 @@ En la mayoría de proyectos se utiliza **bridge**.
 ```bash
 docker network ls
 ```
+
+---
 
 ### Inspeccionar una red
 
@@ -422,7 +412,7 @@ Al crear el contenedor:
 docker run -d --name mi-contenedor --network mi-red nginx
 ```
 
-O conectar un contenedor existente:
+O conectar un contenedor existente a una red existente:
 
 ```bash
 docker network connect mi-red mi-contenedor
@@ -444,4 +434,6 @@ docker network disconnect mi-red mi-contenedor
 docker network rm mi-red
 ```
 
-> Una red no puede eliminarse si tiene contenedores conectados.
+> ⚠️ Una red no puede eliminarse si tiene contenedores conectados.
+
+Con esto, ya tenemos una idea clara de cómo funcionan las redes en Docker y cómo podemos conectar contenedores entre sí o aislarlos unos de otros.
