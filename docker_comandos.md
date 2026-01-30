@@ -356,7 +356,67 @@ docker run -e SPRING_PROFILES_ACTIVE=prod -p 8080:8080 mi-microservicio
 
 ============================================================
 
-## 11. Redes Docker (Docker Networks)
+## 11. Gestión de Volúmenes
+
+### Crear un volumen
+
+```bash
+docker volume create mi-volumen
+```
+
+### Listar volúmenes
+
+```bash
+docker volume ls
+```
+
+### Inspeccionar un volumen
+
+```bash
+docker volume inspect mi-volumen
+```
+
+### Montar un volumen en un contenedor
+
+```bash
+docker run -d --name mi-contenedor -v mi-volumen:/datos nginx
+```
+
+### Eliminar un volumen
+
+```bash
+docker volume rm mi-volumen
+```
+
+### Copiar archivos entre el host y el contenedor
+
+```bash
+# Host -> Contenedor
+docker cp /ruta/a/mi/archivo.txt mi-contenedor:/datos/archivo.txt
+
+# Contenedor -> Host
+docker cp mi-contenedor:/datos/archivo.txt /ruta/a/mi/archivo.txt
+```
+
+### Copiar archivos entre el host y el contenedor
+
+```bash
+docker run -d --name mi-contenedor -v /ruta/a/mi/directorio:/datos nginx
+```
+
+### Gestión de volúmenes desde Docker Desktop
+
+Desde la pestaña Volumes, se pueden:
+
+* Crear, eliminar o inspeccionar volúmenes.
+* Importar/exportar volúmenes.
+* Acceder a los archivos internos y mover archivos entre host y contenedor.
+  
+> Esta sección gráfica se ve mejor en vídeo para entender su funcionamiento.
+
+============================================================
+
+## 12. Redes Docker (Docker Networks)
 
 Las **redes Docker** permiten la comunicación controlada entre contenedores.
 
