@@ -28,7 +28,7 @@
 <div align="center">
 
 ## 🌐 Connect with Me 🍬
-[![Portfolio](https://img.shields.io/badge/Portfolio-%231877F2.svg?logo=Portfolio&logoColor=white)](https://juancarlos92.github.io/Portfolio/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-carlos-filter) [![Gmail](https://img.shields.io/badge/Correo%20Electronico-%23E4405F.svg?logo=correo%20Electronico&logoColor=white)](https://instagram.com/technologyhell)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%231877F2.svg?logo=Portfolio&logoColor=white)](https://juancarlos92.github.io/Portfolio/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-carlos-filter) [![Gmail](https://img.shields.io/badge/juancarlosfilter@gmail.com-%23E4405F.svg?logo=correo%20Electronico&logoColor=white)]()
 
 </div>
 
