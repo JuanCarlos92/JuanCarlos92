@@ -33,6 +33,4 @@
 </div>
 
 <!-- Snake Animation -->
-<div align="center">
-  ![snake gif](https://raw.githubusercontent.com/JuanCarlos92/JuanCarlos92/output/snake.svg)
-</div>
+<img src="https://raw.githubusercontent.com/JuanCarlos92/JuanCarlos92/output/snake.svg" alt="Snake animation" />
