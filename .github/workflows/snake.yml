@@ -52,7 +52,7 @@ jobs:
 
       - name: Generate GitHub Contributions Snake Animations
 
-        uses: Platane/snk@v3
+        uses: JuanCarlos92/snk@v3
 
         with:
 
@@ -82,7 +82,7 @@ jobs:
 
       - name: Deploy to Output Branch
 
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JuanCarlos92/actions-gh-pages@v3
 
         with:
 
