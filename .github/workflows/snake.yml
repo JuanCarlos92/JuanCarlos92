@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */12 * * *"  # Cada 12 horas
   workflow_dispatch:
 
 permissions:
@@ -13,15 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️Clonar el repositorio
       - uses: actions/checkout@v3
 
-      - name: Generate snake
-        uses: Platane/snk/svg-only@v3
+      # 2️Generar SVG con estilo y GIF animado
+      - name: Generate Snake Animations
+        uses: Platane/snk@v3
         with:
           github_user_name: JuanCarlos92
-          outputs: output/snake.svg
+          outputs: |
+            output/snake.svg
+            output/snake-dark.svg
+            output/ocean.gif
+          palette_dark: github-dark
+          snake_color: orange
+          dots_color: "#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push snake
+      # 3️Publicar en la rama 'output'
+      - name: Push Snake to Output Branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
