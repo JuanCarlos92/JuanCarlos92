@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://miro.medium.com/max/2048/1*OohqW5DGh9CQS4hLY5FXzA.png" height="230"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=technologyhell&theme=aura&hide_border=true" width="70%" />
 </p>
 <hr>
 <h1 align="center">I'm Juan Carlos Filter<a><img src="https://github.com/Kathryn-Jie/Kathryn-Jie/blob/main/wave.gif" width="60px"/></h1>
