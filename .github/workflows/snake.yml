@@ -33,9 +33,9 @@ jobs:
           github_user_name: JuanCarlos92
           # Define the output files and their configurations
           outputs: |
-            output/snake.svg?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            output/snake.svg?color_snake=orange&color_dots="%23bfd6f6,%238dbdff,%2364a1f4,%234b91f1,%233c7dd9"
             output/snake-dark.svg?palette=github-dark
-            output/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            output/ocean.gif?color_snake=orange&color_dots="%23bfd6f6,%238dbdff,%2364a1f4,%234b91f1,%233c7dd9"
             
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
