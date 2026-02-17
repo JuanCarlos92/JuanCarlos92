@@ -106,3 +106,5 @@
     
   </kbd>
 </p>
+
+<img src="https://raw.githubusercontent.com/JuanCarlos92/JuanCarlos92/output/snake.svg" alt="Snake animation" />
