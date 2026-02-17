@@ -35,9 +35,8 @@
 
 </div>
 
-<hr>
 <!-- Snake Animation -->
 <div align="center">
-  
+<hr>
 <img src="https://raw.githubusercontent.com/JuanCarlos92/JuanCarlos92/output/snake.svg" alt="Snake animation" />
 </div>
