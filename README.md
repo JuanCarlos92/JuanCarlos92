@@ -28,11 +28,13 @@
 <div align="center">
 
 ## 🌐 Connect with Me 🍬
-[![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/technologyhell) [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/6ME9TDt) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/technologyhell) [![Portfolio](https://img.shields.io/badge/Portfolio-%23E4405F.svg?logo=Portfolio&logoColor=white)](https://juancarlos92.github.io/Portfolio/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-carlos-filter) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/technologyhell) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/technologyhell) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@technologyhell) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-%231877F2.svg?logo=Portfolio&logoColor=white)](https://juancarlos92.github.io/Portfolio/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-carlos-filter) [![Gmail](https://img.shields.io/badge/Correo%20Electronico-%23E4405F.svg?logo=correo%20Electronico&logoColor=white)](https://instagram.com/technologyhell)
 
 </div>
 
+
 <!-- Snake Animation -->
 <div align="center">
+  
 <img src="https://raw.githubusercontent.com/JuanCarlos92/JuanCarlos92/output/snake.svg" alt="Snake animation" />
 </div>
