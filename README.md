@@ -5,7 +5,7 @@
 </p>
 <hr>
 <h1 align="center">I'm Juan Carlos Filter<a><img src="https://github.com/Kathryn-Jie/Kathryn-Jie/blob/main/wave.gif" width="60px"/></h1>
-<Br>
+
 <h1>About Me! 😎</h1>
 
 - 🏫 Programando y aprendiendo tecnologías a diario.
