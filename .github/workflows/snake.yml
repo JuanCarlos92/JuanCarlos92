@@ -23,11 +23,11 @@ jobs:
           github_user_name: JuanCarlos92
           outputs: |
             output/snake.svg
-            output/snake-dark.svg
-            output/ocean.gif
-          palette_dark: github-dark
-          snake_color: orange
-          dots_color: "#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9"
+
+            output/snake-dark.svg?palette=github-dark
+
+            output/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
