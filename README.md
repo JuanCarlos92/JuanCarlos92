@@ -1,14 +1,14 @@
+<!-- Stats -->
 <p align="center">
   <img src="https://github-readme-stats-fast.vercel.app/api?username=juancarlos92&show_icons=true&theme=aura&hide_border=true" width="55%" /> </br>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=JuanCarlos92&theme=aura&hide_border=true" width="50%" />
   <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=juancarlos92&theme=aura&&hide_border=true&layout=compact" width="36%" /> </br>
 </p>
 
+<!--About Me! -->
 <h1 align="center">I'm Juan Carlos Filter<a><img src="https://github.com/Kathryn-Jie/Kathryn-Jie/blob/main/wave.gif" width="60px"/></h1>
 <br>
   
-<!--<h1>About Me! 😎</h1> -->
-
 - 🏫 Programando y aprendiendo tecnologías a diario.
   
 - 💻 Mi hobby es programar, siempre explorando nuevas tecnologías y creando proyectos.
@@ -32,11 +32,11 @@
 
 ## 🌐 Connect with Me 🍬
 [![Portfolio](https://img.shields.io/badge/Portfolio-%231877F2.svg?logo=Portfolio&logoColor=white)](https://juancarlos92.github.io/Portfolio/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-carlos-filter) [![Gmail](https://img.shields.io/badge/juancarlosfilter@gmail.com-%23E4405F.svg?logo=correo%20Electronico&logoColor=white)]()
-
 </div>
 
 <!-- Snake Animation -->
 <div align="center">
-<hr>
+  
 <img src="https://raw.githubusercontent.com/JuanCarlos92/JuanCarlos92/output/snake.svg" alt="Snake animation" />
+
 </div>
