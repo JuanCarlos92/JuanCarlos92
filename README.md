@@ -21,7 +21,7 @@ JavaScript · Ionic · Oracle · Android · Kotlin · Flutter · GO · Bash/Shel
 🌱 Actualmente estoy aprendiendo:  
 Node.js · NestJS · NextJS · Expressjs · React · Docker · Dockerfile · JUnit · Mockito
 
-👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
+👨‍💻 Portfolio: <a href="juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
 
 
 <!-- Tech Stack -->
