@@ -86,7 +86,7 @@ docker start <ID_o_nombre>
 docker restart <ID_o_nombre>
 ```
 
-- **Eliminar un contenedor**
+- **Eliminar contenedor**
 ``` shell
 - Eliminar contenedor
 docker rm <ID_o_nombre>
