@@ -9,7 +9,7 @@
 <h1 align="center">Hi, I'm Juan Carlos Filter<a><img src="https://github.com/Kathryn-Jie/Kathryn-Jie/blob/main/wave.gif" width="60px"/></h1>
 <br>
 
-💻 Full Stack Developer especializado en el desarrollo de aplicaciones web utilizando Java, Spring Boot y Angular.
+💻 Full Stack Developer especializado en el desarrollo de aplicaciones web utilizando Java, Spring Boot y Angular.  
 🚀 Desarrollo aplicaciones con arquitecturas REST, microservicios y despliegues en la nube usando AWS (EC2, RDS, Cognito).
 
 🧠 Tecnologías que uso habitualmente:  
