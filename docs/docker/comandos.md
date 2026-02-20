@@ -127,14 +127,21 @@ docker attach <ID_o_nombre>
 ```
 
 - **Ejecutar comandos en un contenedor activo (terminal)**
+
 ``` shell
+- Ejecutar comandos en un contenedor activo (terminal)
 docker exec -it <ID_o_nombre> <comando> (ej: bash o sh)
 ```
-        - Acceso con bash
-            docker exec -it <contenedor> /bin/bash
 
-        - Acceso con sh
-            docker exec -it <contenedor> /bin/sh
+``` shell
+- Acceso con bash
+docker exec -it <contenedor> /bin/bash
+```
+
+``` shell
+- Acceso con sh
+docker exec -it <contenedor> /bin/sh
+```
 
 - **Inspeccionar detalles (ruta de registro, IP, etc.)**
 ``` shell
@@ -170,10 +177,14 @@ docker images
 
 - **Construir imagen desde Dockerfile**
 ``` shell
+- Construir imagen
 docker build -t <nombre:tag> <contexto>
 ```
-    - Con argumentos
-        docker build --build-arg <VAR=valor> -t <nombre>
+
+``` shell
+- Imagen Con argumentos
+docker build --build-arg <VAR=valor> -t <nombre>
+```
 
 - **Eliminar una imagen**
 ``` shell
