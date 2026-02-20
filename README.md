@@ -16,10 +16,10 @@
 🧠 Tecnologías que uso habitualmente:  
 Java · Spring Boot · Spring Security · Angular · TypeScript · Hibernate · JPA · Lombok · MySQL · Oracle · AWS · Git · Maven · npm · Swagger · Flutter
 
-⚙️ También tengo experiencia en:
+⚙️ También tengo experiencia en:  
 Microservicios · JWT · REST APIs · Ionic · Bootstrap · Android · Bash/Shell · PL/SQL
 
-🌱 Actualmente estoy aprendiendo:
+🌱 Actualmente estoy aprendiendo:  
 Node.js · NestJS · Docker · Dockerfile · React · AWS Lambda
 
 📦 Algunos de mis proyectos incluyen aplicaciones Full Stack, arquitecturas de microservicios y aplicaciones cliente-servidor con Java.
