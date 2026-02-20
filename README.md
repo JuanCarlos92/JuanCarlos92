@@ -13,7 +13,7 @@
 
 🚀 Desarrollo aplicaciones con arquitecturas REST, microservicios y despliegues en la nube usando AWS (EC2, RDS, Cognito).
 
-🧠 Tecnologías que uso habitualmente:
+🧠 Tecnologías que uso habitualmente:  
 Java · Spring Boot · Spring Security · Angular · TypeScript · Hibernate · JPA · Lombok · MySQL · Oracle · AWS · Git · Maven · npm · Swagger · Flutter
 
 ⚙️ También tengo experiencia en:
