@@ -25,16 +25,7 @@ Node.js · NestJS · Docker · Dockerfile · React · AWS Lambda
 📦 Algunos de mis proyectos incluyen aplicaciones Full Stack, arquitecturas de microservicios y aplicaciones cliente-servidor con Java.
 
 👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
-  
-- 🏫 Programando y aprendiendo tecnologías a diario.
-  
-- 💻 Mi hobby es programar, siempre explorando nuevas tecnologías y creando proyectos.
 
-- 🔭 Uso a diario: **Java,  Spring,  Angular,  TypeScript,  JPA,  Hibernate,  lombok,  Flutter, GO**.
-
-- 🌱 Estoy aprendiendo: **Spring,  Angular, React, Lambda,  Laravel, Flutter, GO**.
-
-- 👨‍💻 <a href="https://juancarlos92.github.io/Portfolio/">Portfolio</a>
 
 <!-- Tech Stack -->
 <div align="center">
