@@ -19,12 +19,12 @@ Java · Spring Boot · Spring Security · Angular · TypeScript · Hibernate · 
 ⚙️ También tengo experiencia en:
 Microservicios · JWT · REST APIs · Ionic · Bootstrap · Android · Bash/Shell · PL/SQL
 
-🌱 Actualmente estoy aprendiendo y mejorando mis conocimientos en:
+🌱 Actualmente estoy aprendiendo:
 Node.js · NestJS · Docker · Dockerfile · React · AWS Lambda
 
 📦 Algunos de mis proyectos incluyen aplicaciones Full Stack, arquitecturas de microservicios y aplicaciones cliente-servidor con Java.
 
-👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">[Portfolio](https://juancarlos92.github.io/Portfolio)</a>
+👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
   
 - 🏫 Programando y aprendiendo tecnologías a diario.
   
