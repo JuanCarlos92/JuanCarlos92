@@ -10,7 +10,6 @@
 <br>
 
 💻 Full Stack Developer especializado en el desarrollo de aplicaciones web utilizando Java, Spring Boot y Angular.
-
 🚀 Desarrollo aplicaciones con arquitecturas REST, microservicios y despliegues en la nube usando AWS (EC2, RDS, Cognito).
 
 🧠 Tecnologías que uso habitualmente:  
