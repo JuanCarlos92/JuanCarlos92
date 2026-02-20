@@ -1,24 +1,78 @@
----
-keywords: [docker, comandos docker, cheatsheet docker, docker tutorial, docker desde cero, docker para principiantes, docker avanzado, docker en producción, gestión de contenedores, gestión de imágenes, volúmenes docker, redes docker]
----
-Instalación de Docker Engine (Linux)
+### 1. Instalación y Configuración del Entorno
 
-Se encarga de instalar todas las dependencias necesarias y configurar el sistema para que Docker funcione correctamente.
-    
+- **Instalar Docker Engine (Linux)**
 ```bash title="Instalación de Docker Engine en Linux"
-curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh y luego sh get-docker.sh
 ```
 
-Introducir usuario en el grupo docker
+- **Añadir usuario al grupo docker**
 ``` shell
-sudo usermod -a -G docker [nombre_usuario]
+sudo usermod -aG docker $USER
 ```
  
-Refrescar grupo sin tener que reiniciar
+- **Refrescar grupo sin tener que reiniciar**
 ``` shell
 newgrp docker
 ```
- 
+
+- **Comprobar versión instalada**
+``` shell
+docker --version
+```
+
+### 2. Gestión de Contenedores (Ciclo de Vida)
+
+- **Crear y arrancar un contenedor**
+``` shell
+docker run <imagen>
+```
+
+  En segundo plano (modo demonio)
+  ``` shell
+  docker run -d <imagen>
+  ```
+
+  Mapear puertos
+  ``` shell
+  docker run -p <puerto_host>:<puerto_contenedor> <imagen>
+  ```
+
+  Asignar nombre personalizado
+  ``` shell
+  docker run --name <nombre> <imagen>
+  ```
+
+  Eliminar al terminar
+  ``` shell
+  docker run --rm <imagen>
+  ```
+
+  Variables de entorno
+  ``` shell
+  docker run -e <VAR=valor> o --env-file <archivo>
+  ```
+
+  Política de reinicio
+  ``` shell
+  docker run --restart <politica> <imagen> (ej: always, unless-stopped)
+  ```
+
+  Arquitectura específica
+  ``` shell
+  docker run --platform <arquitectura> <imagen>
+  ```
+
+- **Listar contenedores**
+
+``` shell
+docker run -p <puerto_host>:<puerto_contenedor> <imagen>
+```
+
+Mapear puertos
+``` shell
+docker run -p <puerto_host>:<puerto_contenedor> <imagen>
+```
+
 Buscar un contenedor para descargar
 ``` shell
 docker search [nombre_contenedor]
