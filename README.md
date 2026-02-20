@@ -16,7 +16,7 @@
 Java · Spring Boot · Microservicios · JWT · REST APIs · Spring Security · Angular · TypeScript · Bootstrap · Hibernate · JPA · Lombok · Lambda · MySQL · Bash/Shell · Git · Maven · npm · Swagger
 
 ⚙️ También tengo experiencia en:  
-JavaScript · Ionic · Oracle · Android · Kotlin · Flutter · GO · Bash/Shell · PL/SQL · AWS · AWS Lambda · AWS Cognito · AWS EC2 · AWS RDS
+JavaScript · Struts2 ·Ionic · Oracle · Android · Kotlin · Flutter · GO · Bash/Shell · PL/SQL · AWS · AWS Lambda · AWS Cognito · AWS EC2 · AWS RDS
 
 🌱 Actualmente estoy aprendiendo:  
 Node.js · NestJS · NextJS · Expressjs · React · Docker · Dockerfile · JUnit · Mockito
