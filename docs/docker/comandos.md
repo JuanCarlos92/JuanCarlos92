@@ -1,69 +1,64 @@
 ### 1. Instalación y Configuración del Entorno
 
-- **1.1 Instalar Docker Engine (Linux)**
+- **Instalar Docker Engine (Linux)**
 ```bash title="Instalación de Docker Engine en Linux"
 curl -fsSL https://get.docker.com -o get-docker.sh y luego sh get-docker.sh
 ```
 
-- **1.2 Añadir usuario al grupo docker**
+- **Añadir usuario al grupo docker**
 ``` shell
 sudo usermod -aG docker $USER
 ```
 
-- **1.3 Refrescar grupo sin tener que reiniciar**
+- **Refrescar grupo sin tener que reiniciar**
 ``` shell
 newgrp docker
 ```
 
-- **1.4 Comprobar versión instalada**
+- **Comprobar versión instalada**
 ``` shell
 docker --version
 ```
 
 ### 2. Gestión de Contenedores (Ciclo de Vida)
 
-- **2.1 Crear y arrancar un contenedor**
+- **Crear y arrancar un contenedor**
 ``` shell
 docker run <imagen>
 ```
 
     - En segundo plano (modo demonio)
-        ```shell
         docker run -d <imagen>
-        ```
 
     - Mapear puertos
-        ```shell
         docker run -p <puerto_host>:<puerto_contenedor> <imagen>
-        ```
 
     - Asignar nombre personalizado
-        ```shell
         docker run --name <nombre> <imagen>
-        ```
 
     - Eliminar al terminar
-        ```shell
         docker run --rm <imagen>
-        ```
 
     - Variables de entorno
-        ```shell
         docker run -e <VAR=valor> o --env-file <archivo>
-        ```
 
     - Política de reinicio
-        ```shell
         docker run --restart <politica> <imagen>
-        ```
         *(ej: always, unless-stopped)*
 
     - Arquitectura específica
-        ```shell
         docker run --platform <arquitectura> <imagen>
-        ```
 
-- **2.2 Listar contenedores**
+- **Listar contenedores**
+````
+    - En ejecución
+    docker ps
+
+    - Todos (incluidos parados)
+    docker ps -a
+
+````
+- **Detener un contenedor**
 
 ``` shell
 docker run -p <puerto_host>:<puerto_contenedor> <imagen>
