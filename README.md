@@ -10,7 +10,7 @@
 <br>
 
 💻 Full Stack Developer especializado en el desarrollo de aplicaciones web utilizando Java, Spring Boot y Angular.  
-🚀 Desarrollo aplicaciones con arquitecturas REST, microservicios.
+🚀 Desarrollo aplicaciones utilizando arquitecturas REST y microservicios.
 
 🧠 Tecnologías que uso habitualmente:  
 Java · Spring Boot · Microservicios · JWT · REST APIs · Spring Security · Angular · TypeScript · Bootstrap · Hibernate · JPA · Lombok · Lambda · MySQL · Bash/Shell · Git · Maven · npm · Swagger
