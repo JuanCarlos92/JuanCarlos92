@@ -28,39 +28,40 @@ docker run <imagen>
 ```
 
     - En segundo plano (modo demonio)
-``` shell
-docker run -d <imagen>
-```
+        ```shell
+        docker run -d <imagen>
+        ```
 
-  - Mapear puertos
-``` shell
-docker run -p <puerto_host>:<puerto_contenedor> <imagen>
-```
+    - Mapear puertos
+        ```shell
+        docker run -p <puerto_host>:<puerto_contenedor> <imagen>
+        ```
 
-Asignar nombre personalizado
-``` shell
-docker run --name <nombre> <imagen>
-```
+    - Asignar nombre personalizado
+        ```shell
+        docker run --name <nombre> <imagen>
+        ```
 
-Eliminar al terminar
-``` shell
-docker run --rm <imagen>
-```
+    - Eliminar al terminar
+        ```shell
+        docker run --rm <imagen>
+        ```
 
-Variables de entorno
-``` shell
-docker run -e <VAR=valor> o --env-file <archivo>
-```
+    - Variables de entorno
+        ```shell
+        docker run -e <VAR=valor> o --env-file <archivo>
+        ```
 
-Política de reinicio
-``` shell
-docker run --restart <politica> <imagen> (ej: always, unless-stopped)
-```
+    - Política de reinicio
+        ```shell
+        docker run --restart <politica> <imagen>
+        ```
+        *(ej: always, unless-stopped)*
 
-Arquitectura específica
-``` shell
-docker run --platform <arquitectura> <imagen>
-```
+    - Arquitectura específica
+        ```shell
+        docker run --platform <arquitectura> <imagen>
+        ```
 
 - **2.2 Listar contenedores**
 
