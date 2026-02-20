@@ -50,14 +50,16 @@ docker run <imagen>
         docker run --platform <arquitectura> <imagen>
 
 - **Listar contenedores**
-````
-    - En ejecución
-    docker ps
+``` shell
+- En ejecución
+docker ps
+```
 
-    - Todos (incluidos parados)
-    docker ps -a
+``` shell
+- Todos (incluidos parados)
+docker ps -a
+```
 
-````
 - **Detener un contenedor**
 
 ``` shell
