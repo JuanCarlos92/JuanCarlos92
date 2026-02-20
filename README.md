@@ -13,13 +13,13 @@
 🚀 Desarrollo aplicaciones con arquitecturas REST, microservicios y despliegues en la nube usando AWS (EC2, RDS, Cognito).
 
 🧠 Tecnologías que uso habitualmente:  
-Java · Spring Boot · Spring Security · Angular · TypeScript · Hibernate · JPA · Lombok · MySQL · Oracle · AWS · Git · Maven · npm · Swagger · Flutter
+Java · Spring Boot · Microservicios · JWT · REST APIs · Spring Security · Angular · TypeScript · Bootstrap · Hibernate · JPA · Lombok · Lambda · MySQL · Bash/Shell · Git · Maven · npm · Swagger
 
 ⚙️ También tengo experiencia en:  
-Microservicios · JWT · REST APIs · Ionic · Bootstrap · Android · Bash/Shell · PL/SQL
+Ionic · Oracle · Android · Kotlin · Flutter · GO · Bash/Shell · PL/SQL · AWS · AWS Lambda · AWS Cognito · AWS EC2 · AWS RDS 
 
 🌱 Actualmente estoy aprendiendo:  
-Node.js · NestJS · Docker · Dockerfile · React · AWS Lambda
+Node.js · NestJS · NextJS · Expressjs · React · Docker · Dockerfile · JUnit · Mockito
 
 👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
 
