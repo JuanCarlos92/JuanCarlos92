@@ -88,11 +88,14 @@ docker restart <ID_o_nombre>
 
 - **Eliminar un contenedor**
 ``` shell
+- Eliminar contenedor
 docker rm <ID_o_nombre>
 ```
 
-        - Forzar eliminación
-            docker rm -f <ID_o_nombre>
+``` shell
+- Forzar eliminación
+docker rm -f <ID_o_nombre>
+```
 
 - **Limpieza masiva**
 
