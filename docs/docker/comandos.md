@@ -27,12 +27,12 @@ docker --version
 docker run <imagen>
 ```
 
-En segundo plano (modo demonio)
+  - En segundo plano (modo demonio)
 ``` shell
 docker run -d <imagen>
 ```
 
-Mapear puertos
+  - Mapear puertos
 ``` shell
 docker run -p <puerto_host>:<puerto_contenedor> <imagen>
 ```
