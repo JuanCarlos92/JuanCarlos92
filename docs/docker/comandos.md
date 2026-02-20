@@ -1,68 +1,68 @@
 ### 1. Instalación y Configuración del Entorno
 
-- **Instalar Docker Engine (Linux)**
+- **1.1 Instalar Docker Engine (Linux)**
 ```bash title="Instalación de Docker Engine en Linux"
 curl -fsSL https://get.docker.com -o get-docker.sh y luego sh get-docker.sh
 ```
 
-- **Añadir usuario al grupo docker**
+- **1.2 Añadir usuario al grupo docker**
 ``` shell
 sudo usermod -aG docker $USER
 ```
- 
-- **Refrescar grupo sin tener que reiniciar**
+
+- **1.3 Refrescar grupo sin tener que reiniciar**
 ``` shell
 newgrp docker
 ```
 
-- **Comprobar versión instalada**
+- **1.4 Comprobar versión instalada**
 ``` shell
 docker --version
 ```
 
 ### 2. Gestión de Contenedores (Ciclo de Vida)
 
-- **Crear y arrancar un contenedor**
+- **2.1 Crear y arrancar un contenedor**
 ``` shell
 docker run <imagen>
 ```
 
-  En segundo plano (modo demonio)
-  ``` shell
-  docker run -d <imagen>
-  ```
+En segundo plano (modo demonio)
+``` shell
+docker run -d <imagen>
+```
 
-  Mapear puertos
-  ``` shell
-  docker run -p <puerto_host>:<puerto_contenedor> <imagen>
-  ```
+Mapear puertos
+``` shell
+docker run -p <puerto_host>:<puerto_contenedor> <imagen>
+```
 
-  Asignar nombre personalizado
-  ``` shell
-  docker run --name <nombre> <imagen>
-  ```
+Asignar nombre personalizado
+``` shell
+docker run --name <nombre> <imagen>
+```
 
-  Eliminar al terminar
-  ``` shell
-  docker run --rm <imagen>
-  ```
+Eliminar al terminar
+``` shell
+docker run --rm <imagen>
+```
 
-  Variables de entorno
-  ``` shell
-  docker run -e <VAR=valor> o --env-file <archivo>
-  ```
+Variables de entorno
+``` shell
+docker run -e <VAR=valor> o --env-file <archivo>
+```
 
-  Política de reinicio
-  ``` shell
-  docker run --restart <politica> <imagen> (ej: always, unless-stopped)
-  ```
+Política de reinicio
+``` shell
+docker run --restart <politica> <imagen> (ej: always, unless-stopped)
+```
 
-  Arquitectura específica
-  ``` shell
-  docker run --platform <arquitectura> <imagen>
-  ```
+Arquitectura específica
+``` shell
+docker run --platform <arquitectura> <imagen>
+```
 
-- **Listar contenedores**
+- **2.2 Listar contenedores**
 
 ``` shell
 docker run -p <puerto_host>:<puerto_contenedor> <imagen>
