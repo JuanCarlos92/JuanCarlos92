@@ -35,6 +35,12 @@ docker run <imagen>
 
     - Asignar nombre personalizado
         docker run --name <nombre> <imagen>
+    
+    - Modo interactivo (bash)
+        docker run -it <imagen> /bin/bash
+    
+    - Modo interactivo (sh)
+        docker run -it <imagen> /bin/bash
 
     - Eliminar al terminar
         docker run --rm <imagen>
@@ -56,11 +62,285 @@ docker ps
 ```
 
 ``` shell
+- Solo IDs
+docker ps -q
+```
+
+``` shell
 - Todos (incluidos parados)
 docker ps -a
 ```
 
 - **Detener un contenedor**
+``` shell
+docker stop <ID_o_nombre>
+```
+
+- **Iniciar un contenedor parado**
+``` shell
+docker start <ID_o_nombre>
+```
+
+- **Reiniciar un contenedor**
+``` shell
+docker restart <ID_o_nombre>
+```
+
+- **Eliminar un contenedor**
+``` shell
+docker rm <ID_o_nombre>
+```
+
+        - Forzar eliminación
+            docker rm -f <ID_o_nombre>
+
+- **Limpieza masiva**
+
+``` shell
+- Parar todos los contenedores
+docker stop $(docker ps -aq)
+```
+
+``` shell
+- Eliminar todos los contenedores
+docker rm $(docker ps -aq)
+```
+
+``` shell
+- Eliminar contenedores parados
+docker container prune
+```
+
+### 3. Interacción y Monitoreo
+
+- **Ver logs**
+``` shell
+docker logs <ID_o_nombre> (usar -f para tiempo real)
+```
+
+- **Conectarse al proceso principal**
+``` shell
+docker attach <ID_o_nombre>
+```
+
+- **Ejecutar comandos en un contenedor activo (terminal)**
+``` shell
+docker exec -it <ID_o_nombre> <comando> (ej: bash o sh)
+```
+        - Acceso con bash
+            docker exec -it <contenedor> /bin/bash
+
+        - Acceso con sh
+            docker exec -it <contenedor> /bin/sh
+
+- **Inspeccionar detalles (ruta de registro, IP, etc.)**
+``` shell
+docker inspect <ID_o_nombre>
+```
+
+- **Obtener solo la ruta de log**
+``` shell
+docker inspect --format='{{.LogPath}}' <ID_o_nombre>
+```
+
+- **Desacoplarse sin apagar**
+``` shell
+Control + P y luego Control + Q
+```
+
+### 4. Gestión de Imágenes
+
+- **Buscar imágenes en Docker Hub**
+``` shell
+docker search <nombre>
+```
+
+- **Descargar una imagen**
+``` shell
+docker pull <imagen>
+```
+
+- **Listar imágenes locales**
+``` shell
+docker images
+```
+
+- **Construir imagen desde Dockerfile**
+``` shell
+docker build -t <nombre:tag> <contexto>
+```
+    - Con argumentos
+        docker build --build-arg <VAR=valor> -t <nombre>
+
+- **Eliminar una imagen**
+``` shell
+docker rmi <ID_o_nombre>
+```
+
+- **Eliminar Todas las imagenes**
+``` shell
+docker rmi $(docker images -q)
+```
+
+
+- **Eliminar imágenes no usadas**
+``` shell
+docker image prune
+```
+
+- **Ver capas/historial**
+``` shell
+docker history <imagen>
+```
+
+- **Etiquetar una imagen**
+``` shell
+docker tag <origen> <nuevo_nombre:tag>
+```
+
+- **Subir a un registro**
+``` shell
+docker push <usuario/imagen>
+```
+
+- **Crear imagen desde un contenedor (snapshot)**
+``` shell
+docker commit <ID_contenedor> <nombre_imagen>
+```
+
+- **Crear imagen desde un contenedor (completa con metadata)**
+``` shell
+docker commit -a "<autor>" -m "<mensaje>" <contenedor> <imagen:tag>
+```
+
+- **Exportar imagen a .tar**
+``` shell
+docker save -o <nombre.tar> <imagen>
+```
+
+- **Importar imagen desde .tar**
+``` shell
+docker load -i <nombre.tar>
+```
+
+### 5. Volúmenes y Archivos
+
+- **Crear un volumen**
+``` shell
+docker volume create <nombre>
+```
+
+- **Listar volúmenes**
+``` shell
+docker volume ls
+```
+
+- **Inspeccionar volumen**
+``` shell
+docker volume inspect <nombre>
+```
+
+- **Eliminar un volumen**
+``` shell
+docker volume rm <nombre>
+```
+
+- **Copiar archivos entre host y contenedor**
+``` shell
+docker cp <origen> <destino>
+```
+
+### 6. Redes (Networking)
+
+- **Crear una red**
+``` shell
+docker network create <nombre>
+```
+
+- **Listar redes**
+``` shell
+docker network ls
+```
+
+- **Inspeccionar red**
+``` shell
+docker network inspect <nombre>
+```
+
+- **Conectar/Desconectar contenedor**
+``` shell
+docker network connect/disconnect <red> <contenedor>
+```
+
+- **Eliminar red**
+``` shell
+docker network rm <nombre>
+```
+
+### 7. Docker Compose
+
+- **Levantar servicios**
+``` shell
+docker compose up (usar -d para segundo plano)
+```
+
+- **Bajar servicios**
+``` shell
+docker compose down (usar -v para borrar volúmenes)
+```
+
+- **Estado y logs**
+``` shell
+docker compose ps
+```
+
+``` shell
+docker compose logs
+```
+
+- **Ejecutar comando en servicio**
+``` shell
+docker compose exec <servicio> <comando>
+```
+
+### 8. Docker Swarm
+
+- **Iniciar Swarm**
+``` shell
+docker swarm init
+```
+
+- **Unirse como trabajador**
+``` shell
+docker swarm join --token <token> <IP:puerto>
+```
+
+- **Salir de Swarm**
+``` shell
+docker swarm leave
+```
+
+- **Gestión de servicios**
+``` shell
+docker service create, ls, inspect, logs, scale, update, rollback, rm
+```
+
+- **Stacks (Compose en Swarm)**
+``` shell
+docker stack deploy, ls, inspect, rm
+```
+
+### 9. Comandos Avanzados
+
+- **Modificar límites en caliente**
+``` shell
+docker update --memory <limite> --cpus <limite> <contenedor>
+```
+
+- **Docker Buildx (Multiarquitectura)**
+``` shell
+docker buildx create, ls, use, build --platform
+```
 
 ``` shell
 docker run -p <puerto_host>:<puerto_contenedor> <imagen>
