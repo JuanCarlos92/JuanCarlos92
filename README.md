@@ -6,8 +6,25 @@
 </p>
 
 <!--About Me! -->
-<h1 align="center">I'm Juan Carlos Filter<a><img src="https://github.com/Kathryn-Jie/Kathryn-Jie/blob/main/wave.gif" width="60px"/></h1>
+<h1 align="center">Hi, I'm Juan Carlos Filter<a><img src="https://github.com/Kathryn-Jie/Kathryn-Jie/blob/main/wave.gif" width="60px"/></h1>
 <br>
+
+💻 Full Stack Developer especializado en el desarrollo de aplicaciones web utilizando Java, Spring Boot y Angular.
+
+🚀 Desarrollo aplicaciones con arquitecturas REST, microservicios y despliegues en la nube usando AWS (EC2, RDS, Cognito).
+
+🧠 Tecnologías que uso habitualmente:
+Java · Spring Boot · Spring Security · Angular · TypeScript · Hibernate · JPA · Lombok · MySQL · Oracle · AWS · Git · Maven · npm · Swagger · Flutter
+
+⚙️ También tengo experiencia en:
+Microservicios · JWT · REST APIs · Ionic · Bootstrap · Android · Bash/Shell · PL/SQL
+
+🌱 Actualmente estoy aprendiendo y mejorando mis conocimientos en:
+Node.js · NestJS · Docker · Dockerfile · React · AWS Lambda
+
+📦 Algunos de mis proyectos incluyen aplicaciones Full Stack, arquitecturas de microservicios y aplicaciones cliente-servidor con Java.
+
+👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">[Portfolio](https://juancarlos92.github.io/Portfolio)</a>
   
 - 🏫 Programando y aprendiendo tecnologías a diario.
   
