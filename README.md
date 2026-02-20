@@ -22,8 +22,6 @@ Microservicios · JWT · REST APIs · Ionic · Bootstrap · Android · Bash/Shel
 🌱 Actualmente estoy aprendiendo:  
 Node.js · NestJS · Docker · Dockerfile · React · AWS Lambda
 
-📦 Algunos de mis proyectos incluyen aplicaciones Full Stack, arquitecturas de microservicios y aplicaciones cliente-servidor con Java.
-
 👨‍💻 Portfolio: <a href="https://juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
 
 
