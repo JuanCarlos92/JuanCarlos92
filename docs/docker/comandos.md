@@ -32,7 +32,7 @@ docker run <imagen>
 docker run -d <imagen>
 ```
 
-  - Mapear puertos
+  -   Mapear puertos
 ``` shell
 docker run -p <puerto_host>:<puerto_contenedor> <imagen>
 ```
