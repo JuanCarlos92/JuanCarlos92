@@ -19,7 +19,7 @@ Java · Spring Boot · Microservicios · JWT · REST APIs · Spring Security · 
 JavaScript · Struts2 · Ionic · Oracle · Android · Kotlin · Flutter · GO · Bash/Shell · PL/SQL · AWS · AWS Lambda · AWS Cognito · AWS EC2 · AWS RDS
 
 🌱 Actualmente estoy aprendiendo:  
-Node.js · NestJS · NextJS · Expressjs · React · Docker · Dockerfile · JUnit · Mockito
+Node.js · NestJS · NextJS · Expressjs · React · Python · Docker · Dockerfile · JUnit · Mockito
 
 👨‍💻 Portfolio: <a href="juancarlos92.github.io/Portfolio/">https://juancarlos92.github.io/Portfolio</a>
 
