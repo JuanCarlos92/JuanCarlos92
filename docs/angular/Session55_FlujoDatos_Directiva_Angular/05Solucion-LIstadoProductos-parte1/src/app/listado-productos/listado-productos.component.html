@@ -1,0 +1,11 @@
+<div class="container mt-3">
+    <h3 class="text-warning">Listado de Productos</h3>
+    <ul class="list-group w-50 mx-auto">
+        @for(producto of productos; track producto){
+            <li class="list-group-item text-center">
+                {{producto.descripcion}},
+                ${{producto.precio}}
+            </li>
+        }
+    </ul>
+</div>
