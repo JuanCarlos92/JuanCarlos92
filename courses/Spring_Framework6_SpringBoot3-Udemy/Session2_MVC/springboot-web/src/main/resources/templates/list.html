@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> // Definición del lenguaje y espacio de nombres de Thymeleaf
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Document</title> // Título dinámico usando Thymeleaf
+</head>
+<body>
+    // Encabezado dinámico usando Thymeleaf
+    <h1 th:text="${title}"></h1>
+    
+    // Mensaje condicional si la lista de usuarios está vacía
+    <div th:if="${users.isEmpty()}" th:text="${'No tiene elementos usuarios!'}"></div>
+
+    // Tabla que muestra la lista de usuarios si no está vacía
+    <table th:if="${not users.isEmpty()}">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>lastname</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            // Iteración sobre la lista de usuarios para mostrar sus detalles
+            <tr th:each="user: ${users}">
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.lastname}"></td>
+                <td th:if="${user.email}" th:text="${user.email}"></td>
+                <td th:if="${not (user.email!=null)}" th:text="${' - '}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
